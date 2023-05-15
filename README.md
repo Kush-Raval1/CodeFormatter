@@ -1,6 +1,5 @@
 # Code to Image Renderer
 
-![Code to Image Renderer](https://example.com/image.png)
 
 Code to Image Renderer is a Python-based application that converts programming code into beautiful and customizable images. It uses syntax highlighting to enhance the visual representation of code snippets and provides options to select different programming languages and themes.
 
