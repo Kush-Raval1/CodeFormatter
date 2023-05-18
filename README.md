@@ -16,8 +16,8 @@ Code to Image Renderer is a Python-based application that converts programming c
 
 To use the Code to Image Renderer, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/code-to-image-renderer.git`
-2. Change to the project directory: `cd code-to-image-renderer`
+1. Clone the repository: `git clone https://github.com/Kush-Raval1/CodeFormatter.git`
+2. Change to the project directory: `cd CodeFormatter`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Run the application: `python main.py`
 
