@@ -1,44 +1,44 @@
 from pygments import highlight, styles
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import ImageFormatter, HtmlFormatter
-from tkinter import Tk, Text, Button, Label, StringVar, messagebox, END
-from tkinter.ttk import Combobox
-from tkinter.scrolledtext import ScrolledText
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageColor
 import re
 import os
+from customtkinter import *
 
-
-class App:
+class App(CTk):
     def __init__(self, root):
+        set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
+        set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
+
         self.root = root
         self.root.title("Code to Image Renderer")
 
         # Initialize the language input
-        self.lang_label = Label(root, text="Programming Language:")
+        self.lang_label = CTkLabel(root, text="Programming Language:")
         self.lang_label.pack()
 
-        self.lang_entry = Text(root, height=1, width=30)
+        self.lang_entry = CTkTextbox(root, height=10, width=300)
         self.lang_entry.pack()
 
         # Initialize the code input
-        self.code_label = Label(root, text="Code:")
+        self.code_label = CTkLabel(root, text="Code:")
         self.code_label.pack()
 
-        self.code_input = ScrolledText(root, height=10, width=70)
+        self.code_input = CTkTextbox(root, height=200, width=1000)
         self.code_input.pack()
 
         # Initialize the theme selection
-        self.theme_label = Label(root, text="Theme:")
+        self.theme_label = CTkLabel(root, text="Theme:")
         self.theme_label.pack()
 
         self.theme_names = list(styles.get_all_styles())
-        self.theme_combobox = Combobox(root, values=self.theme_names)
+        self.theme_combobox = CTkOptionMenu(root, values=self.theme_names)
         self.theme_combobox.pack()
 
         # Initialize the submit button
-        self.submit_button = Button(root, text="Submit", command=self.submit)
-        self.submit_button.pack()
+        self.submit_button = CTkButton(root, text="Submit", command=self.submit)
+        self.submit_button.pack(pady=20)
 
     def submit(self):
         lang = self.lang_entry.get("1.0", END).strip()  # get language
@@ -135,6 +135,6 @@ class ChromaScript(App):
         rounded_image.show()
 
 if __name__ == "__main__":
-    root = Tk()
+    root = CTk()
     app = ChromaScript(root)
     root.mainloop()
