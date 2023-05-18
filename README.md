@@ -30,6 +30,9 @@ To use the Code to Image Renderer, follow these steps:
 5. The image will also be displayed in a separate window for preview.
 
 ## Examples
+### Main Application:
+![image](https://github.com/Kush-Raval1/CodeFormatter/assets/120294776/89eccd97-49a6-487c-ba6a-5336bac03eef)
+
 
 ### Python code with Monokai theme:
 
